@@ -1,0 +1,11 @@
+# Ignore checkpoint file
+checkpoint.json
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# OS generated files
+.DS_Store
+Thumbs.db
