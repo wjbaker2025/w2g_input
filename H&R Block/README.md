@@ -8,7 +8,7 @@ Welcome to **W-2G Automation for Tax Platforms**! Tired of manually entering han
 w2g_input/
 ├── H&R Block/
 │   ├── w2g_input_hrblock.py      # H&R Block automation script
-│   ├── W-2G_All.csv              # CSV file with your data (ensure correct column headers)
+│   ├── w-2g_all.csv              # CSV file with your data (ensure correct column headers)
 │   ├── README.md                 # H&R Block-specific instructions & walkthrough
 │   └── images/                   # 12 screenshots for the H&R Block playthrough
 ├── TurboTax/
@@ -38,7 +38,7 @@ This document details the H&R Block automation script (`w2g_input_hrblock.py`). 
 **Important:**  
 Your CSV must include the required headers exactly as defined in the script:  
 `payers_name`, `zip`, `address`, `federal_id_number`, `phone`, `1_gross_winnings`, `2_date_won`, `3_type_of_wager`, `4_federal_tax_withheld`, `5_transaction`, `6_race`, `7_identical_wagers`, `8_cashier`, `11_first_id`, `13_state`, `payers_state_id`, `15_state_income_tax_withheld`.  
-Follow the template provided in `W-2G_All.csv`.
+Follow the template provided in `w-2g_all_template.csv`.
 
 ---
 
@@ -50,7 +50,7 @@ The script reads your CSV and uses checkpointing to resume where you left off:
 
 ```python
 # Load CSV data and fill missing values with empty strings
-df = pd.read_csv("W-2G_All.csv")
+df = pd.read_csv("w-2g_all.csv")
 df.fillna("", inplace=True)
 
 # Determine which row to start from based on checkpoint
