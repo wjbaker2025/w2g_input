@@ -16,7 +16,7 @@ w2g_input/
 │   └── README.md                 # Instructions for TurboTax (coming soon)
 ├── .gitignore                    # Ignores checkpoint.json and other temporary files
 └── LICENSE                       # MIT License
-```bash
+```
 
 ## Overview
 
@@ -56,7 +56,7 @@ df.fillna("", inplace=True)
 # Determine which row to start from based on checkpoint
 start_index = load_checkpoint()
 print(f"Starting from row index {start_index + 1}.")
-```python
+```
 
 *Explanation:* This code ensures your data is complete and resumes processing from the last completed row stored in `checkpoint.json`.
 
@@ -73,7 +73,7 @@ context = pw.chromium.launch_persistent_context(
     headless=False
 )
 page = context.pages[0] if context.pages else context.new_page()
-```python
+```
 
 *Explanation:* A persistent context lets your browser use saved logins (e.g., Windows Hello or face recognition) without hardcoding any credentials.
 
